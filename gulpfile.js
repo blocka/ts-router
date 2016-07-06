@@ -31,9 +31,9 @@ gulp.task('babel', ['typescript'], () => {
 
 gulp.task('build', ['babel']);
 gulp.task('install', () => {
-    fs.copySync('./typings/koa', '../../typings/koa');
+    /*fs.copySync('./typings/koa', '../../typings/koa');
     fs.copySync('./typings/node', '../../typings/node');
-    fs.copySync('./typings/ts-router', '../../typings/ts-router');
+    fs.copySync('./typings/ts-router', '../../typings/ts-router');*/
 });
 
 gulp.task('test:typescript', () => {
