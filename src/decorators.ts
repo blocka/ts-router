@@ -6,7 +6,11 @@ import 'reflect-metadata';
 
 const ensureProp = (prop:string, target:Controller) => {
   prop = `__${prop}`;
-  if (!target.hasOwnProperty(prop)) target[prop] = {};
+  if (!target.hasOwnProperty(prop)) {
+    const propsToInherit = target[prop];
+
+    target[prop] = Object.assign({}, propsToInherit);
+  }
 }
 
 export function Before(target:Controller, key:string) {
